@@ -131,8 +131,7 @@ curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6..." http://localhost
 Abaixo, uma evidência visual da execução bem-sucedida do teste de carga usando o Apache JMeter.
 Todos os requests foram processados com sucesso (código 200) durante o teste com múltiplos usuários simultâneos.
 
-![TESTES]([teste_print.jpg](https://github.com/user-attachments/assets/fe5982c8-ff0c-4b98-9b2c-fc6e73590c8e))
-![teste_print](https://github.com/user-attachments/assets/bee9f1d0-5b09-4df2-af1d-dd8e193f0454)
+![TESTE](https://github.com/user-attachments/assets/bee9f1d0-5b09-4df2-af1d-dd8e193f0454)
 
 
 ### 📌 Observações:
