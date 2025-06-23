@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\ApiApplication.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\config\SecurityConfig.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\config\SwaggerConfig.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\controller\AuthController.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\controller\TestProtectedController.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\model\User.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\repository\UserRepository.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\service\AuthService.java
+C:\Users\Administrator\Desktop\projeto-api\demo\demo\src\main\java\com\example\authserver\service\JwtService.java
