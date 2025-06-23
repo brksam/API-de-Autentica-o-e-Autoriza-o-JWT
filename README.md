@@ -127,6 +127,9 @@ curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6..." http://localhost
  - Abra o arquivo login_stress_test.jmx no JMeter.
  - Configure a URL de destino (se necessário).
  - Execute o plano de teste.
+### 📸 Evidência de Teste de Carga (JMeter)
+Abaixo, uma evidência visual da execução bem-sucedida do teste de carga usando o Apache JMeter.
+Todos os requests foram processados com sucesso (código 200) durante o teste com múltiplos usuários simultâneos.
 ### 📌 Observações:
  - O projeto está preparado para ambiente de desenvolvimento, com banco H2 em memória.
  - Autenticação via JWT implementada com a biblioteca java-jwt.
