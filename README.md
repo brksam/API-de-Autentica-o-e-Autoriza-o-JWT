@@ -82,7 +82,7 @@ Configurações:
 | `GET`  | `/api/users`         | Listar usuários (exemplo protegido) | ✅            |
 
 ### 📌 JMX
-O arquivo está em projeto-api
+O arquivo está em projeto-api -> jmeter-tests
 ### 📦 Exemplos de Payload
 ```
 {
