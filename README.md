@@ -81,6 +81,8 @@ Configurações:
 | `POST` | `/api/auth/login`    | Login e geração do JWT              | ❌            |
 | `GET`  | `/api/users`         | Listar usuários (exemplo protegido) | ✅            |
 
+### 📌 JMX
+O arquivo está em projeto-api
 ### 📦 Exemplos de Payload
 ```
 {
@@ -118,7 +120,11 @@ curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6..." http://localhost
 ### 📊 Testes de Carga com JMeter
 📌 Como rodar:
  - Instale o Apache JMeter.
- - Abra o arquivo tests/load-test.jmx no JMeter.
+ - No repositório do projeto, navegue até a pasta:
+   ```
+   projeto-api/jmeter-tests/
+   ```
+ - Abra o arquivo login_stress_test.jmx no JMeter.
  - Configure a URL de destino (se necessário).
  - Execute o plano de teste.
 ### 📌 Observações:
