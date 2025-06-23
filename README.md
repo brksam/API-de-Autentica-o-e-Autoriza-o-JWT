@@ -48,59 +48,82 @@ A API permite o cadastro de usuários, login e controle de acesso a endpoints pr
 
 ### 📌 Clonando o repositório:
 
-```bash
+```
 git clone https://github.com/brksam/API-de-Autentica-o-e-Autoriza-o-JWT.git
 cd API-de-Autentica-o-e-Autoriza-o-JWT
-📌 Executando a aplicação:
-bash
-Copy
-Edit
+```
+### 📌 Executando a aplicação:
+```
 ./mvnw spring-boot:run
+```
 A aplicação estará disponível em:
 http://localhost:8080
 
-📑 Documentação Swagger
-Acesse a documentação interativa após iniciar o projeto:
+### 📑 Documentação Swagger
 
+Acesse a documentação interativa após iniciar o projeto:
 http://localhost:8080/swagger-ui/index.html
 
-🛢️ Console H2 Database
+### 🛢️ Console H2 Database:
 Acesse em:
 
 http://localhost:8080/h2-console
 
 Configurações:
+ - JDBC URL: jdbc:h2:mem:testdb
+ - Username: sa
+ - Password: (deixe vazio ou ajuste no application.yml)
 
-JDBC URL: jdbc:h2:mem:testdb
+### 📖 Endpoints Principais
+| Método | Endpoint             | Descrição                           | Autenticação |
+| :----- | :------------------- | :---------------------------------- | :----------- |
+| `POST` | `/api/auth/register` | Cadastro de novo usuário            | ❌            |
+| `POST` | `/api/auth/login`    | Login e geração do JWT              | ❌            |
+| `GET`  | `/api/users`         | Listar usuários (exemplo protegido) | ✅            |
 
-Username: sa
-
-Password: (deixe vazio ou ajuste no application.yml)
-
-🧪 Executar os Testes
+### 📦 Exemplos de Payload
+```
+{
+  "username": "admin",
+  "password": "123456"
+}
+```
+### 📌 Login
+```
+{
+  "username": "admin",
+  "password": "123456"
+}
+```
+Resposta:
+```
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+}
+```
+### 🔐 Utilização do Token JWT
+Para acessar endpoints protegidos, envie o token no header Authorization da requisição:
+```
+Authorization: Bearer <seu_token_jwt>
+```
+Exemplo:
+```
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6..." http://localhost:8080/api/users
+```
+### 🧪 Executar os Testes
 📌 Testes Unitários e de Integração:
-bash
-Copy
-Edit
+```
 ./mvnw test
-📊 Testes de Carga com JMeter
+```
+### 📊 Testes de Carga com JMeter
 📌 Como rodar:
-Instale o Apache JMeter.
-
-Abra o arquivo tests/load-test.jmx no JMeter.
-
-Configure a URL de destino (se necessário).
-
-Execute o plano de teste.
-
-📌 Observações
-O projeto está preparado para uso em ambiente de desenvolvimento, com banco em memória.
-
-Autenticação via JWT é configurada através do pacote com.auth0:java-jwt.
-
-Configuração de endpoints públicos e protegidos via Spring Security.
-
-Documentação automatizada com SpringDoc OpenAPI.
-
-Hot reload habilitado via Spring Boot DevTools.
-
+ - Instale o Apache JMeter.
+ - Abra o arquivo tests/load-test.jmx no JMeter.
+ - Configure a URL de destino (se necessário).
+ - Execute o plano de teste.
+### 📌 Observações:
+ - O projeto está preparado para ambiente de desenvolvimento, com banco H2 em memória.
+ - Autenticação via JWT implementada com a biblioteca java-jwt.
+ - Configuração de segurança via Spring Security e filtros JWT customizados.
+ - Documentação automatizada com SpringDoc OpenAPI.
+ - Hot reload habilitado via Spring Boot DevTools.
